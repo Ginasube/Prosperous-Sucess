@@ -64,6 +64,7 @@
   sh jenkins-install.sh
   ``` 
     - Launch Instance
+    -sudo cat link from jenkins server and paste to get the password of Jenkins 
 
 4) SonarQube
     - Create a SonarQube VM instance 
@@ -108,7 +109,7 @@
     - Instance type: `t2.micro`
     - Key pair: `Select a keypair`
     - Security Group (Eit/Open): `8080, 9100, 9997` and `22 to 0.0.0.0/0`
-    - User data (Copy the following user data): https://github.com/awanmbandi/realworld-cicd-pipeline-project/blob/tomcat-splunk-installation/tomcat-ssh-configure.sh
+    - User data (Copy the following user data) to create Tomcat: https://github.com/awanmbandi/realworld-cicd-pipeline-project/blob/tomcat-splunk-installation/tomcat-ssh-configure.sh
     - Launch Instance
 
 8) EC2 (Prod Environment)
@@ -157,7 +158,7 @@
 
 12) Slack 
     - Go to the bellow Workspace and create a Private Slack Channel and name it "yourfirstname-jenkins-cicd-pipeline-alerts"
-    - Link: https://join.slack.com/t/jjtechtowerba-zuj7343/shared_invite/zt-24mgawshy-EhixQsRyVuCo8UD~AbhQYQ  
+    - Link: https://join.slack.com/t/jjtechtowerba-zuj7343/shared_invite/zt-24mgawshy-EhixQsRyVuCo8UD~AbhQYQ  or ginas personal slack chanel https://app.slack.com/client/T07F9NNMT3R/C07GD443C8Y
       - You can either join through the browser or your local Slack App
       - Create a `Private Channel` using the naming convention `YOUR_INITIAL-cicd-pipeline-alerts`
         - **NOTE:** *`(The Channel Name Must Be Unique, meaning it must be available for use)`*
@@ -417,11 +418,11 @@ cd /opt/splunk/bin
     - Refresh your Browser and Log back into Jenkins
     - Once you log back into Jenkins
 
-3)  #### Global tools configuration:
+3)  #### Global tools configuration:(Ginas added note we are not going to do this step which is installing JDK because we installed it already when creating the jenkins server)
     - Click on Manage Jenkins -->> Global Tool Configuration
     ![JDKSetup!](https://github.com/awanmbandi/realworld-cicd-pipeline-project/blob/zdocs/images/sdsdsdsdsd.png)
 
-    - **JDK** 
+    - **JDK** (we are not going to do this step which is installing JDK because we installed it already when creating the jenkins server)
         - Click on `Add JDK` -->> Make sure **Install automatically** is enabled 
         
         **Note:** By default the **Install Oracle Java SE Development Kit from the website** make sure to close that option by clicking on the image as shown below.
